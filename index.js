@@ -70,7 +70,7 @@ setInterval(() => {
     }
 }, 30_000) // check every 30 seconds
 
-let phoneNumber = "249967109953"
+let phoneNumber = "+249967109953"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
 global.botname = ".⤹بــــــــــط الاسطوࢪي'ي               𓅆⤾."
@@ -191,7 +191,7 @@ async function startXeonBotInc() {
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
             v = store.contacts[id] || {}
             if (!(v.name || v.subject)) v = XeonBotInc.groupMetadata(id) || {}
-            resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
+            resolve(v.name || v.subject || PhoneNumber('+249967109953' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
         else v = id === '0@s.whatsapp.net' ? {
             id,
@@ -214,7 +214,7 @@ async function startXeonBotInc() {
         if (!!global.phoneNumber) {
             phoneNumber = global.phoneNumber
         } else {
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFormat: 249967109953 (without + or spaces) : `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFormat:+249967109953 (without + or spaces) : `)))
         }
 
         // Clean the phone number - remove any non-digit characters
@@ -223,7 +223,7 @@ async function startXeonBotInc() {
         // Validate the phone number using awesome-phonenumber
         const pn = require('awesome-phonenumber');
         if (!pn('+' + phoneNumber).isValid()) {
-            console.log(chalk.red('Invalid phone number. Please enter your full international number (e.g., 249967109953 for US, 249967109953 for UK, etc.) without + or spaces.'));
+            console.log(chalk.red('Invalid phone number. Please enter your full international number (e.g.,+249967109953 for US,+249967109953 for UK, etc.) without + or spaces.'));
             process.exit(1);
         }
 

@@ -146,8 +146,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A";
-global.ytch = "The developer .⤹𝗕𝗢𝗗𝗬 𝗘𝗟 𝗬𝗢𝗨𝗧𝗨𝗕𝗘𝗥⤾.";
+global.channelLink = "اكتب رابط قناتك هنا";
+global.ytch = "The developer .⤹بط الاسطوري⤾.";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -192,7 +192,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
             
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, { 
-                    text: '📢 *Join our Channel:*\nhttps://t.me/BODY_EL_YOUTUBER_20' 
+                    text: '📢 *انضم لي قناتي:*'رابط القناة'
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
@@ -201,7 +201,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 return;
             } else if (buttonId === 'support') {
                 await sock.sendMessage(chatId, { 
-                    text: `🔗 *Support*\n\nhttps://t.me/BODY_EL_YOUTUBER_20` 
+                    text: `🔗 *Support*\n\n`رابط القناةة` 
                 }, { quoted: message });
                 return;
             }
