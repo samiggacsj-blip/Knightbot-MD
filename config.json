@@ -1,0 +1,49 @@
+{
+  "botName": "𝑹𝒂𝒛𝒂𝒏 𝑯𝒂𝒔𝒂𝒏",
+  "prefix": ".",
+  "skipSync": true,
+  "admins": ['48699552301"@s.whatsapp.net"],  //اكتب رقمك
+  "dashboard": {
+    "enabled": true,
+    "port": 3000,
+    "adminPassword": "اكتب_باسورد_لوحة_التحكم",  //اكتب باسورد
+    "sessionTimeout": 1800000,
+    "refreshInterval": 3000,
+    "otpEnabled": true,
+    "otpExpiry": 300000,
+    "maxOtpAttempts": 3,
+    "blockDuration": 900000,
+    "adminNumbers": ["48699552301"]  //اكتب رقمك
+  },
+  "database": {
+    "type": "json",
+    "mongodb": {
+      "uri": "mongodb://localhost:27017/whatsapp_bot"
+    },
+    "mysql": {
+      "host": "localhost",
+      "user": "root",
+      "password": "password",
+      "database": "whatsapp_bot"
+    },
+    "sqlite": {
+      "path": "database.db"
+    }
+  },
+  "apikeys": {
+    "anbu": "",
+    "anbu_note": "AIzaSyBq_iLRzKCvF4qrxcPedluRJtJpLi-D81A",
+    "gemini": "",
+    "gemini_note": "AIzaSyBq_iLRzKCvF4qrxcPedluRJtJpLi-D81A"
+  },
+  "simiLang": "ar",
+  "logCommands": true,
+  "antiInbox": false,
+  "whitelist": [],
+  "blacklist": [],
+  "permissions": {
+    "adminOnly": false,
+    "moderatorCommands": [],
+    "bannedUsers": []
+  }
+}
